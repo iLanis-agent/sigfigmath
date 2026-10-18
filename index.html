@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sig Fig Math - significant figures arithmetic</title>
+<style>
+  :root { --accent:#6a3fb0; --ink:#1a102e; --paper:#f7f3fc; --soft:#e8def6; }
+  * { box-sizing:border-box; margin:0; }
+  body { font-family:Georgia, "Times New Roman", serif; background:var(--paper); color:var(--ink); line-height:1.55; }
+  main { max-width:660px; margin:0 auto; }
+  .boundary { background:#fdeaea; border-left:6px solid #b03030; color:#5c1c1c; border-radius:6px; padding:1rem 1.1rem; }
+  .boundary strong { display:block; margin-bottom:.3rem; }
+  body { padding:2.5rem 1.2rem; }
+  h1 { font-size:2.2rem; color:var(--accent); }
+  p.lede { font-size:1.12rem; margin:.9rem 0 1.6rem; }
+  .boundary { margin-bottom:1.6rem; }
+  section { background:var(--soft); border-left:5px solid var(--accent); border-radius:6px; padding:1.1rem 1.2rem; margin-bottom:1.2rem; }
+  h2 { font-size:1.18rem; margin-bottom:.5rem; }
+  section p { font-size:.98rem; }
+  a.btn { display:inline-block; margin-top:1.4rem; background:var(--accent); color:#fff; text-decoration:none; padding:.8rem 1.6rem; border-radius:999px; font-size:1.05rem; }
+  footer { margin-top:2.2rem; font-size:.85rem; color:#7660a0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Sig Fig Math</h1>
+  <p class="lede">1200 might have two significant figures or four, and the number alone cannot say.</p>
+  <div class="boundary">
+    <strong>Boundary: arithmetic only</strong>
+    Sig Fig Math counts significant figures, rounds to a number of them and adds decimals exactly from the numbers you type. Rounding is half away from zero. It does not know the rounding or notation rules your course, lab or journal requires. Check those where they apply.
+  </div>
+  <section>
+    <h2>The count truth</h2>
+    <p>0.00450 has 3 significant figures.</p>
+  </section>
+  <section>
+    <h2>The round truth</h2>
+    <p>12345.6 to 3 significant figures is 1.23 x 10^4.</p>
+  </section>
+  <section>
+    <h2>The add truth</h2>
+    <p>12.11 + 0.3 = 12.41 exactly. The less precise number has 1 decimal place, so the sum is 12.4.</p>
+  </section>
+  <a class="btn" href="app.html">Run your numbers</a>
+  <footer>Sig Fig Math is exact arithmetic over the numbers you enter, nothing more.</footer>
+</main>
+</body>
+</html>
