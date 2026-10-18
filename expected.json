@@ -1,0 +1,437 @@
+[
+ {
+  "fn": "countTruth",
+  "args": [
+   "0.00450"
+  ],
+  "expected": "0.00450 has 3 significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "1200"
+  ],
+  "expected": "1200 has 2 to 4 significant figures, depending on which trailing zeros were measured."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "1200."
+  ],
+  "expected": "1200. has 4 significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "1.200"
+  ],
+  "expected": "1.200 has 4 significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "100.0"
+  ],
+  "expected": "100.0 has 4 significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "5"
+  ],
+  "expected": "5 has 1 significant figure."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "10"
+  ],
+  "expected": "10 has 1 to 2 significant figures, depending on which trailing zeros were measured."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "0.5"
+  ],
+  "expected": "0.5 has 1 significant figure."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "-3.50"
+  ],
+  "expected": "-3.50 has 3 significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "007"
+  ],
+  "expected": "007 has 1 significant figure."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "1050"
+  ],
+  "expected": "1050 has 3 to 4 significant figures, depending on which trailing zeros were measured."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "0"
+  ],
+  "expected": "0 is zero, and the usual rules do not give it a count of significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "0.000"
+  ],
+  "expected": "0.000 is zero, and the usual rules do not give it a count of significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   ".0450"
+  ],
+  "expected": ".0450 has 3 significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "+12.30"
+  ],
+  "expected": "+12.30 has 4 significant figures."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   " 4500 "
+  ],
+  "expected": "4500 has 2 to 4 significant figures, depending on which trailing zeros were measured."
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   ""
+  ],
+  "expected": "ERR:enter a plain decimal number such as 0.00450, 1200 or -3.5"
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "1e3"
+  ],
+  "expected": "ERR:enter a plain decimal number such as 0.00450, 1200 or -3.5"
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "1,200"
+  ],
+  "expected": "ERR:enter a plain decimal number such as 0.00450, 1200 or -3.5"
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   "1111111111111111111111111111111"
+  ],
+  "expected": "ERR:the number can have at most 30 digits"
+ },
+ {
+  "fn": "countTruth",
+  "args": [
+   12
+  ],
+  "expected": "ERR:enter a plain decimal number such as 0.00450, 1200 or -3.5"
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "12345.6",
+   3
+  ],
+  "expected": "12345.6 to 3 significant figures is 1.23 x 10^4."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "0.004567",
+   2
+  ],
+  "expected": "0.004567 to 2 significant figures is 0.0046 (4.6 x 10^-3)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "999.5",
+   3
+  ],
+  "expected": "999.5 to 3 significant figures is 1.00 x 10^3."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "9.995",
+   3
+  ],
+  "expected": "9.995 to 3 significant figures is 10.0 (1.00 x 10^1)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "2.5",
+   1
+  ],
+  "expected": "2.5 to 1 significant figure is 3 (3 x 10^0)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "-0.0456",
+   2
+  ],
+  "expected": "-0.0456 to 2 significant figures is -0.046 (-4.6 x 10^-2)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "12",
+   4
+  ],
+  "expected": "12 to 4 significant figures is 12.00 (1.200 x 10^1)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "123",
+   3
+  ],
+  "expected": "123 to 3 significant figures is 123 (1.23 x 10^2)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "1",
+   1
+  ],
+  "expected": "1 to 1 significant figure is 1 (1 x 10^0)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "0.5",
+   1
+  ],
+  "expected": "0.5 to 1 significant figure is 0.5 (5 x 10^-1)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "15",
+   1
+  ],
+  "expected": "15 to 1 significant figure is 2 x 10^1."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "1200",
+   5
+  ],
+  "expected": "1200 to 5 significant figures is 1200.0 (1.2000 x 10^3)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "0.00450",
+   3
+  ],
+  "expected": "0.00450 to 3 significant figures is 0.00450 (4.50 x 10^-3)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "0",
+   3
+  ],
+  "expected": "0 is zero, so rounding it to 3 significant figures leaves zero."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "99999",
+   2
+  ],
+  "expected": "99999 to 2 significant figures is 1.0 x 10^5."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "3.14159265358979",
+   6
+  ],
+  "expected": "3.14159265358979 to 6 significant figures is 3.14159 (3.14159 x 10^0)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "123456789",
+   30
+  ],
+  "expected": "123456789 to 30 significant figures is 123456789.000000000000000000000 (1.23456789000000000000000000000 x 10^8)."
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "abc",
+   3
+  ],
+  "expected": "ERR:enter a plain decimal number such as 0.00450, 1200 or -3.5"
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "12.3",
+   0
+  ],
+  "expected": "ERR:significant figures must be a whole number from 1 to 30"
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "12.3",
+   31
+  ],
+  "expected": "ERR:significant figures must be a whole number from 1 to 30"
+ },
+ {
+  "fn": "roundTruth",
+  "args": [
+   "12.3",
+   2.5
+  ],
+  "expected": "ERR:significant figures must be a whole number from 1 to 30"
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "12.11",
+   "0.3"
+  ],
+  "expected": "12.11 + 0.3 = 12.41 exactly. The less precise number has 1 decimal place, so the sum is 12.4."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "3.57",
+   "1.2"
+  ],
+  "expected": "3.57 + 1.2 = 4.77 exactly. The less precise number has 1 decimal place, so the sum is 4.8."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "1.25",
+   "2.25"
+  ],
+  "expected": "1.25 + 2.25 = 3.50 exactly. Both have 2 decimal places, so the sum keeps 2 decimal places: 3.50."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "100",
+   "0.55"
+  ],
+  "expected": "100 + 0.55 = 100.55 exactly. The less precise number has 0 decimal places, so the sum is 101."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "5",
+   "-3"
+  ],
+  "expected": "5 + -3 = 2 exactly. Both have 0 decimal places, so the sum keeps 0 decimal places: 2."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "0.5",
+   "-0.55"
+  ],
+  "expected": "0.5 + -0.55 = -0.05 exactly. The less precise number has 1 decimal place, so the sum is -0.1."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "-1.26",
+   "0.1"
+  ],
+  "expected": "-1.26 + 0.1 = -1.16 exactly. The less precise number has 1 decimal place, so the sum is -1.2."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "1.5",
+   "1.5"
+  ],
+  "expected": "1.5 + 1.5 = 3.0 exactly. Both have 1 decimal place, so the sum keeps 1 decimal place: 3.0."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "0.04",
+   "0.01"
+  ],
+  "expected": "0.04 + 0.01 = 0.05 exactly. Both have 2 decimal places, so the sum keeps 2 decimal places: 0.05."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "999.9",
+   "0.15"
+  ],
+  "expected": "999.9 + 0.15 = 1000.05 exactly. The less precise number has 1 decimal place, so the sum is 1000.1."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "1.",
+   "0.25"
+  ],
+  "expected": "1. + 0.25 = 1.25 exactly. The less precise number has 0 decimal places, so the sum is 1."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "-2.5",
+   "-2.54"
+  ],
+  "expected": "-2.5 + -2.54 = -5.04 exactly. The less precise number has 1 decimal place, so the sum is -5.0."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "0",
+   "0.000"
+  ],
+  "expected": "0 + 0.000 = 0.000 exactly. The less precise number has 0 decimal places, so the sum is 0."
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "x",
+   "1"
+  ],
+  "expected": "ERR:enter a plain decimal number such as 0.00450, 1200 or -3.5"
+ },
+ {
+  "fn": "addTruth",
+  "args": [
+   "1",
+   ""
+  ],
+  "expected": "ERR:enter a plain decimal number such as 0.00450, 1200 or -3.5"
+ }
+]
